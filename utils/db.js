@@ -1,13 +1,13 @@
-import envLoader from './env_loader';
-import Collection from 'mongodb/lib/collection';
 import mongodb from 'mongodb';
+import Collection from 'mongodb/lib/collection';
+import envLoader from './env_loader';
 
 /**
- * MongoDB client.
+ * Represents -> MongoDB client.
  */
 class DBClient {
   /**
-   * Createsa new DBClient instance.
+   * Create  new DBClient instance.
    */
   constructor() {
     envLoader();
@@ -21,7 +21,7 @@ class DBClient {
   }
 
   /**
-   * Checks if client's connection to the MongoDB server is active.
+   * Checks if this client's connection to the MongoDB server is active.
    * @returns {boolean}
    */
   isAlive() {
@@ -29,7 +29,7 @@ class DBClient {
   }
 
   /**
-   * Retrieve - > number of users in db
+   * Retrieve number of users in the database.
    * @returns {Promise<Number>}
    */
   async nbUsers() {
@@ -37,7 +37,7 @@ class DBClient {
   }
 
   /**
-   * Retrieve ->  number of files in the db.
+   * Retrieve the number of files in the database.
    * @returns {Promise<Number>}
    */
   async nbFiles() {
@@ -45,7 +45,7 @@ class DBClient {
   }
 
   /**
-   * Retrieve -> reference to the `users` collection.
+   * Retrieve reference to the `users` collection.
    * @returns {Promise<Collection>}
    */
   async usersCollection() {
@@ -53,7 +53,7 @@ class DBClient {
   }
 
   /**
-   * Retrieve ->  reference to the `files` collection.
+   * Retrieve reference to the `files` collection.
    * @returns {Promise<Collection>}
    */
   async filesCollection() {
