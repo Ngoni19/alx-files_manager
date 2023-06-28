@@ -1,4 +1,4 @@
-/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default.*/
 import dbClient from '../utils/db';
 import sha1 from 'sha1';
 import Queue from 'bull/lib/queue';
